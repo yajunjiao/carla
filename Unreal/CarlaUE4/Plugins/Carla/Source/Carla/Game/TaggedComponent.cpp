@@ -144,9 +144,11 @@ FPrimitiveSceneProxy * UTaggedComponent::CreateSceneProxy(UStaticMeshComponent *
   }
 
   USplineMeshComponent* SplineMeshComponent = Cast<USplineMeshComponent>(StaticMeshComponent);
+#if CARLA_HAS_SPLINE_PROXY
   if (SplineMeshComponent) {
     return new FTaggedSplineMeshSceneProxy(SplineMeshComponent, TaggedMID, TaggedMaterials);
   } else {
+#endif
     return new FTaggedStaticMeshSceneProxy(StaticMeshComponent, true, TaggedMID, TaggedMaterials);
   }
 }

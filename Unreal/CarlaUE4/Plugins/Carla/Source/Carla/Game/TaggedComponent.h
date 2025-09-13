@@ -4,7 +4,13 @@
 #include "Materials/MaterialInstanceDynamic.h"
 #include "Engine/InstancedStaticMesh.h"
 #include "Components/HierarchicalInstancedStaticMeshComponent.h"
+#if __has_include("SplineMeshSceneProxy.h")
 #include "SplineMeshSceneProxy.h"
+#define CARLA_HAS_SPLINE_PROXY 1
+#else
+#include "Components/SplineMeshComponent.h"
+#define CARLA_HAS_SPLINE_PROXY 0
+#endif
 #include "Landscape.h"
 #include "LandscapeRender.h"
 #include "LandscapeMaterialInstanceConstant.h"
@@ -63,6 +69,7 @@ private:
   UMaterialInstance * TaggedMaterialInstance;
 };
 
+#if CARLA_HAS_SPLINE_PROXY
 class FTaggedSplineMeshSceneProxy : public FSplineMeshSceneProxy
 {
 public:
@@ -74,6 +81,7 @@ public:
 private:
   UMaterialInstance * TaggedMaterialInstance;
 };
+#endif
 
 class FTaggedSkeletalMeshSceneProxy : public FSkeletalMeshSceneProxy
 {
