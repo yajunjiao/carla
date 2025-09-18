@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.26",
+	"EngineAssociation": "{0CF869A2-43B3-CCF4-A064-D0A668CA268D}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -109,29 +109,29 @@
 			"Name": "EditorScriptingUtilities",
 			"Enabled": true
 		},
-        {
-            "Name": "CarlaTools",
-            "Enabled": false
-        },
-        {
-            "Name": "PythonScriptPlugin",
-            "Enabled": true
-        },
-        {
-            "Name": "AlembicHairImporter",
-            "Enabled": true
-        },
-        {
-            "Name": "HairStrands",
-            "Enabled": true
-        },
-        {
-            "Name": "MDL",
-            "Enabled": false
-        },
-        {
-            "Name": "SimReady",
-            "Enabled": false
-        }
-    ]
+		{
+			"Name": "CarlaTools",
+			"Enabled": false
+		},
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "AlembicHairImporter",
+			"Enabled": true
+		},
+		{
+			"Name": "HairStrands",
+			"Enabled": true
+		},
+		{
+			"Name": "MDL",
+			"Enabled": false
+		},
+		{
+			"Name": "SimReady",
+			"Enabled": false
+		}
+	]
 }
